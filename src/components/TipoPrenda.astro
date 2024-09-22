@@ -1,0 +1,23 @@
+---
+interface Props {
+  href: string;
+  title: string;
+}
+
+const { href, title } = Astro.props;
+---
+
+<a href={href} class="group flex flex-col items-center justify-center gap-3 p-2 max-w-40">
+  <figure class="rounded-full overflow-hidden size-36">
+    <img
+      loading="lazy"
+      decoding="async" 
+      class="object-cover w-full h-full group-hover:scale-150 transition-transform duration-700 ease-in-out" 
+      src="/franela.png"
+      alt="tipo de prenda" 
+    />
+  </figure>
+  <figcaption class="w-full">
+    <p class="text-primary font-medium uppercase text-xl text-center text-pretty">{title}</p>
+  </figcaption>
+</a>

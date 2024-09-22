@@ -1,0 +1,13 @@
+---
+interface Props {
+  href: string;
+  text: string;
+}
+
+const { href, text } = Astro.props;
+---
+
+<a href={href} class="group relative text-primary/85 py-2 hover:text-primary">
+  {text}
+  <span class="absolute h-px w-0 group-hover:w-full bg-primary/0 group-hover:bg-primary bottom-0 left-0 transition-all duration-300"></span>
+</a>

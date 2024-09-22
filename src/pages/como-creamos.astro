@@ -1,0 +1,50 @@
+---
+import Section from "@/components/Section.astro";
+import Layout from "../layouts/Layout.astro"
+import ComoCreamosSection from "@/components/sections/ComoCreamos.astro";
+import VerticalCarousel from "@/components/sections/VerticalCarousel.astro";
+
+const infoBoxes = [
+  {
+    title: "Conservación de Recursos",
+    description: "Reciclar materiales como el algodón reduce la necesidad de producir nuevas materias primas, lo que ahorra agua, energía y otros recursos naturales.",
+    image: "conservacion.webp"
+  },
+  {
+    title: "Conciencia social y ambiental",
+    description: "Econotrapos es sustentable y educamos y sensibilizamos a la comunidad sobre la importancia de la sostenibilidad y el impacto positivo del reciclaje en el medio ambiente.",
+    image: "conciencia.webp"
+  },
+  {
+    title: "Disminución de la Huella de Carbono",
+    description: "Al reutilizar ropa existente, se evitan las emisiones de CO2 asociadas con la producción y transporte de nuevas prendas.",
+    image: "carbono.webp"
+  }
+]
+---
+
+<Layout 
+  title="Como creamos - Econotrapos" 
+  description="Nuestro proceso de seleccion, entrega y reciclado de paños reciclados de algodón para la limpieza industrial."
+>
+  <ComoCreamosSection is_index={false}>
+    <p class="text-text2/85 pb-8 text-pretty">Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+  </ComoCreamosSection>
+  
+  <VerticalCarousel />
+
+  <Section>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-20">
+        {infoBoxes.map(box => (
+          <div class="bg-white p-6">
+            <div class="flex flex-col items-center text-center">
+              <img src={`/${box.image}`} alt={box.title} class="w-12 h-12 text-blue-500 mb-4" />
+              <h3 class="font-semibold mb-2">{box.title}</h3>
+              <p class="text-text2/85 text-pretty text-base">{box.description}</p>
+            </div>
+          </div>
+        ))}
+    </div>
+  </Section>
+
+</Layout>

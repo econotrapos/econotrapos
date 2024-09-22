@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import CarouselPaño from '@/assets/carousel.png';
+
+import PrimaryButton from '@/components/PrimaryButton.astro';
+import Section from '../Section.astro';
+---
+
+<Section>
+  <header aria-label="Contenedor de hero" class="flex flex-col items-center justify-center gap-5 text-center mt-20">
+    <h1 class="text-text1 text-3xl font-semibold">Limpieza Industrial Sostenible</h1>
+    <p class="max-w-[500px] text-center">Elaboramos, distribuimos y comercializamos paños reciclados de algodón para la limpieza industrial.</p>
+    <PrimaryButton href="#" className='mt-6'>Ver Catalogo</PrimaryButton>
+  </header>
+  <div aria-label="carousel" class="hidden sm:flex justify-between min-h-80 md:max-h-[10dvh] gap-3 md:gap-10 mt-10 [&>*]:rounded-[50px]">
+    <Image class="hidden lg:block self-start" src={CarouselPaño} alt="carousel" width="270" height="220" />
+    <Image class="hidden sm:block self-end" src={CarouselPaño} alt="carousel" width={220} height={190} />
+    <Image class="hidden sm:block self-end" src={CarouselPaño} alt="carousel" width={220} height={190} />
+    <Image class="hidden lg:block self-start" src={CarouselPaño} alt="carousel" width="270" height="220" />
+  </div>
+  <Image class="block sm:hidden rounded-[50px] w-full aspect-video object-cover my-20 px-2" src={CarouselPaño} alt="carousel" width="270" height="220" />
+</Section>

@@ -1,0 +1,48 @@
+---
+interface Props {
+  is_index: boolean;
+}
+
+import { Image } from "astro:assets";
+import H2 from "../H2.astro";
+import Section from "../Section.astro";
+
+import IconFigure from '@/components/IconFigure.astro';
+import MaterialImage from '@/assets/material.png';
+
+const { is_index } = Astro.props;
+---
+
+<Section>
+  <div class={`${is_index ? 'py-32' : 'py-0'}`}>
+    <header class="flex flex-col items-center gap-4 justify-center text-center p-10">
+       { is_index ? <H2 title="Como creamos" /> : <h1 class="text-text1 text-3xl font-semibold">Como creamos</h1> }
+      <slot />
+    </header>
+    <div class="flex items-center">
+      <IconFigure 
+        description="Seleccionar"
+      >
+        <Image src={MaterialImage} alt="Icono de material reciclado" width={100} height={100} />
+      </IconFigure>
+      <span class="mb-14 h-1 flex-1 bg-primary opacity-50"></span>
+      <IconFigure 
+        description="Cortar"
+      >
+        <Image src={MaterialImage} alt="Icono de material reciclado" width={100} height={100} />
+      </IconFigure>
+      <span class="mb-14 h-1 flex-1 bg-primary opacity-50"></span>
+      <IconFigure 
+        description="Entregar"
+      >
+        <Image src={MaterialImage} alt="Icono de material reciclado" width={100} height={100} />
+      </IconFigure>
+      <span class="mb-14 h-1 flex-1 bg-primary opacity-50"></span>
+      <IconFigure 
+        description="Reciclar"
+      >
+        <Image src={MaterialImage} alt="Icono de material reciclado" width={100} height={100} />
+      </IconFigure>
+    </div>
+  </div>
+</Section>
