@@ -28,7 +28,7 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="relative w-screen bg-background overflow-x-hidden">
-		<header class="w-full border-b fixed top-0 py-3 bg-background z-50">
+		<header class="w-full border-b fixed top-0 py-3 bg-background filter backdrop-blur-sm z-50">
 			<div aria-label="Contenedor de navegación" class="mx-auto flex items-center justify-between container text-primary">
 				<a href="/" aria-label="Logotipo Econotrapos">
 					<img src="/logotipo.png" alt="Logotipo Econotrapos" class="size-20" />
@@ -46,9 +46,6 @@ const { title, description } = Astro.props;
 						</li>
 						<li>
 							<Link href="/sobre-nosotros" text="Sobre Nosotros" />
-						</li>
-						<li>
-							<Link href="/contacto" text="Contacto" />
 						</li>
 					</ul>
 				</nav>
