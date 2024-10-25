@@ -1,0 +1,36 @@
+---
+import Section from "@/components/Section.astro"
+import Layout from "../layouts/Layout.astro"
+import FAQ from "@/components/sections/FAQ.astro";
+---
+
+<Layout 
+  title="Sobre nosotros - Econotrapos" 
+  description="Informacion de la empresa Econotrapos, conocenos y contactenos."
+>
+  <Section>
+    <div class="flex flex-col items-center gap-5 py-10 text-center text-pretty px-10 lg:px-40">
+      <h1 class="text-3xl font-semibold">Sobre Nosotros</h1> 
+      <p class="text-text2/85 font-normal">Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-hidden [&>div>img]:rounded-xl [&>div>img]:overflow-hidden">
+      <div class="col-span-1 grid grid-rows-2 gap-4 overflow-hidden">
+        <img src="/foto1.webp" alt="Ecopaños azules de franela" class="hidden md:block object-cover w-full h-full" />
+        <img src="/foto2.webp" alt="Ecopaños grises de franela" class="hidden md:block object-cover w-full h-full" />
+      </div>
+      
+      <img src="/foto5.webp" alt="Ecopaños blanco" class="object-cover rounded-xl w-full h-full" />
+      
+      <div class="col-span-1 grid grid-rows-2 gap-4">
+        <img src="/foto4.webp" alt="Ecopaños blanco" class="hidden md:block object-cover w-full h-full" />
+        <img src="/foto6.webp" alt="Ecopaños blanco" class="hidden md:block object-cover w-full h-full" />
+      </div>
+    </div>
+  </Section>
+
+  <FAQ />
+
+</Layout>

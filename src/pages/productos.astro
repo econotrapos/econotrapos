@@ -1,94 +1,35 @@
 ---
+import ProductCard from "@/components/productCard.astro";
 import Section from "@/components/Section.astro";
 import Layout from "@/layouts/Layout.astro";
 import HeaderProducts from "@/layouts/ProductsLayout.astro";
 ---
 
-<Layout 
-  title="Productos - Econotrapos" 
+<Layout
+  title="Productos - Econotrapos"
   description="Nuestro proceso de seleccion, entrega y reciclado de paños reciclados de algodón para la limpieza industrial."
 >
-  
-  <HeaderProducts 
-    title="Todos los productos" 
-  />
-  
-  <div aria-label="breadcrumb" class="container mx-auto py-5 flex items-center gap-2 text-sm">
+  <HeaderProducts title="Todos los productos" />
+
+  <div
+    aria-label="breadcrumb"
+    class="container mx-auto py-5 flex items-center gap-2 text-sm"
+  >
     <a href="/" class="text-text2/70 hover:text-text2">Inicio</a>
     <span class="text-text2/90 text-xs">/</span>
     <span class="text-text2">Productos</span>
   </div>
 
   <Section>
-    <div class="flex items-start justify-between gap-y-20 gap-x-1 py-10 flex-wrap">
-
-      <article class="flex flex-col items-center gap-2 w-44 md:w-80 overflow-hidden rounded-lg"> 
-        <img src="/franela.png" alt="franela" class="w-full h-auto" />
-        <div class="flex flex-col items-start gap-1 pb-3">
-          <h2 class="text-primary text-lg">Franela</h2>
-          <p class="text-text2/85 text-pretty">Paños reciclados de algodón para la limpieza industrial</p>
-        </div>
-        <button class="bg-primary/85 text-white rounded-xl p-2 md:p-4 w-full hover:bg-primary">
-          Pídelo aquí
-        </button>
-      </article>
-      
-      <article class="flex flex-col items-center gap-2 w-44 md:w-80 overflow-hidden rounded-lg"> 
-        <img src="/franela.png" alt="franela" class="w-full h-auto" />
-        <div class="flex flex-col items-start gap-1 pb-3">
-          <h2 class="text-primary text-lg">Franela</h2>
-          <p class="text-text2/85 text-pretty">Paños reciclados de algodón para la limpieza industrial</p>
-        </div>
-        <button class="bg-primary/85 text-white rounded-xl p-2 md:p-4 w-full hover:bg-primary"> 
-          Pídelo aquí
-        </button>
-      </article>
-      
-      <article class="flex flex-col items-center gap-2 w-44 md:w-80 overflow-hidden rounded-lg"> 
-        <img src="/franela.png" alt="franela" class="w-full h-auto" />
-        <div class="flex flex-col items-start gap-1 pb-3">
-          <h2 class="text-primary text-lg">Franela</h2>
-          <p class="text-text2/85 text-pretty">Paños reciclados de algodón para la limpieza industrial</p>
-        </div>
-        <button class="bg-primary/85 text-white rounded-xl p-2 md:p-4 w-full hover:bg-primary">
-          Pídelo aquí
-        </button>
-      </article>
-      
-      <article class="flex flex-col items-center gap-2 w-44 md:w-80 overflow-hidden rounded-lg"> 
-        <img src="/franela.png" alt="franela" class="w-full h-auto" />
-        <div class="flex flex-col items-start gap-1 pb-3">
-          <h2 class="text-primary text-lg">Franela</h2>
-          <p class="text-text2/85 text-pretty">Paños reciclados de algodón para la limpieza industrial</p>
-        </div>
-        <button class="bg-primary/85 text-white rounded-xl p-2 md:p-4 w-full hover:bg-primary"> 
-          Pídelo aquí
-        </button>
-      </article>
-      
-      <article class="flex flex-col items-center gap-2 w-44 md:w-80 overflow-hidden rounded-lg"> 
-        <img src="/franela.png" alt="franela" class="w-full h-auto" />
-        <div class="flex flex-col items-start gap-1 pb-3">
-          <h2 class="text-primary text-lg">Franela</h2>
-          <p class="text-text2/85 text-pretty">Paños reciclados de algodón para la limpieza industrial</p>
-        </div>
-        <button class="bg-primary/85 text-white rounded-xl p-2 md:p-4 w-full hover:bg-primary">
-          Pídelo aquí
-        </button>
-      </article>
-      
-      <article class="flex flex-col items-center gap-2 w-44 md:w-80 overflow-hidden rounded-lg"> 
-        <img src="/franela.png" alt="franela" class="w-full h-auto" />
-        <div class="flex flex-col items-start gap-1 pb-3">
-          <h2 class="text-primary text-lg">Franela</h2>
-          <p class="text-text2/85 text-pretty">Paños reciclados de algodón para la limpieza industrial</p>
-        </div>
-        <button class="bg-primary/85 text-white rounded-xl p-2 md:p-4 w-full hover:bg-primary"> 
-          Pídelo aquí
-        </button>
-      </article>
-
+    <div
+      class="flex items-start justify-between gap-y-20 gap-x-1 py-10 flex-wrap"
+    >
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
     </div>
   </Section>
-
 </Layout>

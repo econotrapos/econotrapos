@@ -1,0 +1,27 @@
+---
+const whatsappNumber = "56977225664";
+const message = "Hola!, estoy interesado en cotizar un pedido";
+
+const createWhatsAppLink = (number: string, message: string) => {
+  const encodedMessage = encodeURIComponent(message);
+  return `https://wa.me/${number}?text=${encodedMessage}`;
+};
+
+const whatsappLink = createWhatsAppLink(whatsappNumber, message);
+---
+
+<article class="flex flex-col items-center gap-2 w-44 md:w-80 overflow-hidden rounded-lg">
+  <img src="/franela.png" alt="franela" class="w-full h-auto" />
+  <div class="flex flex-col items-start gap-1 pb-3">
+    <h2 class="text-primary text-lg">Franela</h2>
+    <p class="text-text2/85 text-pretty">Paños reciclados de algodón para la limpieza industrial</p>
+  </div>
+  <a 
+    href={whatsappLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="bg-primary/85 text-white rounded-xl p-2 md:p-4 w-full hover:bg-primary text-center no-underline"
+  >
+    Pídelo aquí
+  </a>
+</article>
