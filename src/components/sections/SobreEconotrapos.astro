@@ -2,54 +2,70 @@
 import H2 from "../H2.astro";
 import Section from "../Section.astro";
 
-import video from "@/assets/econotrapos.webm"
+import video from "@/assets/nuevo-econo.mp4";
 ---
 
 <Section>
-    <div class="grid grid-cols-3 gap-14 py-10">
-      <article class="col-span-1">
-        <video
-          class="rounded-2xl object-cover w-full h-full"
-          id="video-player"
-          playsinline
-          autoplay
-          loop
-          muted
-        >
-          <source src={video} type="video/webm" />
-        </video>
-      </article>
-      <article class="col-span-2 flex flex-col gap-10">
-        <header class="flex flex-col gap-4">
-          <H2 title="Sobre Econotrapos" />
-          <p class="text-text2 font-light text-base text-balance">
-            Ofrecemos una selección de Trapos de calidad a precios
-            competitivos, junto con un servicio al cliente excepcional.
-            Ofrecemos tanto a empresas como a usuarios particulares una solución
-            práctica y de la mas alta calidad. Destacando la industria minera, talleres
-            mecánicos, pintura automotriz, imprentas, talleres de serigrafia, mueblerías y
-            la industria en general.
-          </p>
-        </header>
-        <div class="grid grid-cols-2 gap-8">
-          <figure class="rounded-2xl overflow-hidden aspect-video h-auto">
-            <img class="object-cover w-full h-full" src="/sobreimg.webp" alt="Paños de econotrapos" />
-          </figure>
-          <figure class="rounded-2xl overflow-hidden aspect-video h-auto">
-            <img class="object-cover w-full h-full" src="/sobreimg2.webp" alt="Paños de econotrapos" />
-          </figure>
-          <figure class="rounded-2xl overflow-hidden aspect-video h-auto">
-            <img class="object-cover w-full h-full" src="/sobreimg.webp" alt="Paños de econotrapos" />
-          </figure>
-          <figure class="rounded-2xl overflow-hidden aspect-video h-auto">
-            <img class="object-cover w-full h-full" src="/sobreimg2.webp" alt="Paños de econotrapos" />
-          </figure>
-        </div>
-      </article>
-    </div>
+  <div class="grid grid-cols-3 gap-14 py-10">
+    <article class="col-span-1">
+      <video
+        class="rounded-2xl object-cover w-full h-full"
+        id="video-player"
+        playsinline
+        autoplay
+        loop
+        muted
+      >
+        <source src={video} type="video/webm" />
+      </video>
+    </article>
+    <article class="col-span-2 flex flex-col gap-10">
+      <header class="flex flex-col gap-4">
+        <H2 title="Sobre Econotrapos" />
+        <p class="text-text2 font-light text-base text-balance">
+          Ofrecemos una selección de Trapos de calidad a precios competitivos,
+          junto con un servicio al cliente excepcional. Ofrecemos tanto a
+          empresas como a usuarios particulares una solución práctica y de la
+          mas alta calidad. Destacando la industria minera, talleres mecánicos,
+          pintura automotriz, imprentas, talleres de serigrafia, mueblerías y la
+          industria en general.
+        </p>
+      </header>
+      <div class="grid grid-cols-2 gap-8">
+        <figure class="rounded-2xl overflow-hidden aspect-video h-auto">
+          <img
+            class="object-cover w-full h-full"
+            src="./sobreimg.webp"
+            alt="Paños de econotrapos"
+          />
+        </figure>
+        <figure class="rounded-2xl overflow-hidden aspect-video h-auto">
+          <img
+            class="object-cover w-full h-full"
+            src="/foto2.webp"
+            alt="Paños de econotrapos"
+          />
+        </figure>
+        <figure class="rounded-2xl overflow-hidden aspect-video h-auto">
+          <img
+            class="object-cover w-full h-full"
+            src="/foto3.webp"
+            alt="Paños de econotrapos"
+          />
+        </figure>
+        <figure class="rounded-2xl overflow-hidden aspect-video h-auto">
+          <img
+            class="object-cover w-full h-full"
+            src="/sobreimg2.webp"
+            alt="Paños de econotrapos"
+          />
+        </figure>
+      </div>
+    </article>
+  </div>
 </Section>
 
 <script is:inline>
-	const videoEl = document.querySelector("#video-player")
-	videoEl?.load()
+  const videoEl = document.querySelector("#video-player");
+  videoEl?.load();
 </script>

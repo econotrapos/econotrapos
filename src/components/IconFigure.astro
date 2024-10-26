@@ -2,22 +2,31 @@
 interface Props {
   description: string;
   subdescription?: string;
+  fullDescription?: string;
 }
 
-const { description, subdescription } = Astro.props;
+const { description, subdescription, fullDescription } = Astro.props;
 ---
 
-
 <figure class="flex flex-col items-center gap-4">
-  <div class="rounded-full sm:size-32 lg:size-40 p-4 bg-[#738263] flex items-center justify-center">
-    <div class="flex items-center justify-center bg-primary rounded-full p-2 lg:p-4 aspect-square outline-offset-8 outline-1 outline-dashed outline-white">
+  <div
+    class="rounded-full sm:size-32 lg:size-40 p-4 bg-[#738263] flex items-center justify-center"
+  >
+    <div
+      class="flex items-center justify-center bg-primary rounded-full p-2 lg:p-4 aspect-square outline-offset-8 outline-1 outline-dashed outline-white"
+    >
       <slot />
     </div>
   </div>
-  <figcaption class="flex flex-col items-center text-center text-sm lg:text-base text-pretty max-w-32">
+  <figcaption
+    class="flex flex-col items-center text-center text-sm lg:text-base text-pretty max-w-40"
+  >
     {description}
     <p class="text-sm text-text2/80 font-light">
       {subdescription}
+    </p>
+    <p class="text-sm text-text2/70 font-light">
+      {fullDescription}
     </p>
   </figcaption>
 </figure>

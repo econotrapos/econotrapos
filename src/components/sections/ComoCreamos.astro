@@ -7,41 +7,78 @@ import { Image } from "astro:assets";
 import H2 from "../H2.astro";
 import Section from "../Section.astro";
 
-import IconFigure from '@/components/IconFigure.astro';
-import MaterialImage from '@/assets/material.png';
+import IconFigure from "@/components/IconFigure.astro";
+import MaterialImage from "@/assets/material.png";
 
 const { is_index } = Astro.props;
 ---
 
 <Section>
-  <div class={`${is_index ? 'py-32' : 'py-0'}`}>
-    <header class="flex flex-col items-center gap-4 justify-center text-center p-10">
-       { is_index ? <H2 title="Como creamos" /> : <h1 class="text-text1 text-3xl font-semibold">Como creamos</h1> }
+  <div class={`${is_index ? "py-32" : "py-0"}`}>
+    <header
+      class="flex flex-col items-center gap-4 justify-center text-center p-10 animate-fade-up"
+    >
+      {
+        is_index ? (
+          <H2 title="Como creamos" />
+        ) : (
+          <h1 class="text-text1 text-3xl font-semibold">Como creamos</h1>
+        )
+      }
       <slot />
     </header>
-    <div class="flex items-center">
-      <IconFigure 
+    <div
+      class="grid grid-cols-2 md:flex md:items-center gap-y-10 animate-fade-up animate-delay-200"
+    >
+      <IconFigure
         description="Seleccionar"
+        fullDescription="Seleccionamos materiales sostenibles y de alta calidad para la producción de los trapos."
       >
-        <Image src={MaterialImage} alt="Icono de material reciclado" width={100} height={100} />
+        <Image
+          src={MaterialImage}
+          alt="Icono de material reciclado"
+          width={100}
+          height={100}
+        />
       </IconFigure>
-      <span class="mb-14 h-1 flex-1 bg-primary opacity-50"></span>
-      <IconFigure 
-        description="Cortar"
+      <span class="md:block hidden mb-14 h-1 flex-1 bg-primary opacity-50"
+      ></span>
+      <IconFigure
+        description="Diseño y corte"
+        fullDescription="Se diseñan y cortan las telas según las especificaciones de tamaño y formas requeridas."
       >
-        <Image src={MaterialImage} alt="Icono de material reciclado" width={100} height={100} />
+        <Image
+          src={MaterialImage}
+          alt="Icono de material reciclado"
+          width={100}
+          height={100}
+        />
       </IconFigure>
-      <span class="mb-14 h-1 flex-1 bg-primary opacity-50"></span>
-      <IconFigure 
-        description="Entregar"
+      <span class="md:block hidden mb-14 h-1 flex-1 bg-primary opacity-50"
+      ></span>
+      <IconFigure
+        description="Inspección y empaque"
+        fullDescription="Se inspeccionan los paños para asegurar su calidad y se empaquetan para su distribución."
       >
-        <Image src={MaterialImage} alt="Icono de material reciclado" width={100} height={100} />
+        <Image
+          src={MaterialImage}
+          alt="Icono de material reciclado"
+          width={100}
+          height={100}
+        />
       </IconFigure>
-      <span class="mb-14 h-1 flex-1 bg-primary opacity-50"></span>
-      <IconFigure 
-        description="Reciclar"
+      <span class="md:block hidden mb-14 h-1 flex-1 bg-primary opacity-50"
+      ></span>
+      <IconFigure
+        description="Reciclaje"
+        fullDescription="Se recopila la ropa usada en fardos y ropa de donación y se clasifican según su tipo y estado para su reutilización."
       >
-        <Image src={MaterialImage} alt="Icono de material reciclado" width={100} height={100} />
+        <Image
+          src={MaterialImage}
+          alt="Icono de material reciclado"
+          width={100}
+          height={100}
+        />
       </IconFigure>
     </div>
   </div>

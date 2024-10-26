@@ -3,18 +3,36 @@ import H2 from "../H2.astro";
 import Section from "../Section.astro";
 
 import TipoPrenda from "../TipoPrenda.astro";
+import BlancoImage from "@/assets/blanco.webp";
+import BlancoPrintImage from "@/assets/blanco-print.webp";
+import MulticolorImage from "@/assets/multicolor.webp";
+import MulticolorPrintImage from "@/assets/multicolor-print.webp";
+import FranelaImage from "@/assets/franela.webp";
 ---
 
 <Section>
-  <header class="flex flex-col items-center gap-4 text-center py-11 sm:px-10 lg:px-48">
+  <header
+    class="flex flex-col items-center gap-4 text-center py-11 sm:px-10 lg:px-48"
+  >
     <H2 title="Nuestro Catálogo" />
-    <p class="text-text2 font-light text-balance">Contamos con más de 3 años de experiencia, nuestra empresa provee al mercado productos de muy buena calidad a precios competitivos, atendiendo el bienestar de las personas impactando positivamente en el medio ambiente que los rodea.</p>
+    <p class="text-text2 font-light text-balance">
+      Contamos con más de 3 años de experiencia, nuestra empresa provee al
+      mercado productos de muy buena calidad a precios competitivos, atendiendo
+      el bienestar de las personas impactando positivamente en el medio ambiente
+      que los rodea.
+    </p>
   </header>
-  <div class="grid grid-cols-2 md:flex items-start justify-between flex-wrap gap-10 py-6">
-    <TipoPrenda href="#" title="Blanco" />
-    <TipoPrenda href="#" title="Blanco print" />
-    <TipoPrenda href="#" title="Multicolor" />
-    <TipoPrenda href="#" title="Multicolor print" />
-    <TipoPrenda href="#" title="Franela" />
+  <div
+    class="grid grid-cols-2 md:flex items-start justify-between flex-wrap gap-10 py-6"
+  >
+    <TipoPrenda href="/productos" title="Blanco" src={BlancoImage} />
+    <TipoPrenda href="/productos" title="Blanco print" src={BlancoPrintImage} />
+    <TipoPrenda href="/productos" title="Multicolor" src={MulticolorImage} />
+    <TipoPrenda
+      href="/productos"
+      title="Multicolor print"
+      src={MulticolorPrintImage}
+    />
+    <TipoPrenda href="/productos" title="Franela" src={FranelaImage} />
   </div>
 </Section>

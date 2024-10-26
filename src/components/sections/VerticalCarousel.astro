@@ -7,82 +7,137 @@ const images = [
     id: 1,
     src: "/vert1.webp",
     alt: "Paños azules",
-    direction: "left"
+    direction: "left",
   },
   {
     id: 2,
     src: "/vert2.webp",
     alt: "Paños azules",
-    direction: "left"
+    direction: "left",
   },
   {
     id: 3,
     src: "/vert3.webp",
     alt: "Paños azules",
-    direction: "left"
+    direction: "left",
   },
   {
     id: 4,
     src: "/vert4.webp",
     alt: "Paños azules",
-    direction: "right"
+    direction: "right",
   },
   {
     id: 5,
     src: "/vert5.webp",
     alt: "Paños azules",
-    direction: "right"
+    direction: "right",
   },
   {
     id: 6,
     src: "/vert6.webp",
     alt: "Paños azules",
-    direction: "right"
-  }
-]
+    direction: "right",
+  },
+];
 ---
 
-<section class="realtive container mx-auto px-10 py-1 my-32 grid grid-cols-1 md:grid-cols-2 gap-10 bg-slate-50/90 rounded-2xl h-auto md:max-h-[420px] overflow-hidden">
+<section
+  class="realtive container mx-auto px-10 py-1 my-32 grid grid-cols-1 md:grid-cols-2 gap-10 bg-slate-50/90 rounded-2xl h-auto md:max-h-[420px] overflow-hidden"
+>
   <div class="hidden md:grid grid-cols-2 gap-5 px-10 overflow-hidden h-full">
-    
     <div class="carouselimg2 flex flex-col items-end gap-3">
       {
-        images.filter(image => image.direction === "left").map(image => <VerticalImage {...image} />)
-      }
-    </div>
-    
-    <div class="carouselimg flex flex-col gap-3 pt-6">
-      {
-        images.filter(image => image.direction === "right").map(image => <VerticalImage {...image} />)
+        images
+          .filter((image) => image.direction === "left")
+          .map((image) => <VerticalImage {...image} />)
       }
     </div>
 
+    <div class="carouselimg flex flex-col gap-3 pt-6">
+      {
+        images
+          .filter((image) => image.direction === "right")
+          .map((image) => <VerticalImage {...image} />)
+      }
+    </div>
   </div>
   <div class="p-4 md:p-10">
-    <header class="pb-10">
-      <H2 title="Econotrapos es sustentable" /> 
-      <p class="text-text2/85 text-pretty ">Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. </p>
+    <header class="pb-5">
+      <H2 title="Econotrapos es sustentable" />
     </header>
     <ul class="[&>*]:py-2">
-      <li class="flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#014b41" fill="none">
-          <path d="M5 14.5C5 14.5 6.5 14.5 8.5 18C8.5 18 14.0588 8.83333 19 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-        <span>
-          Reducción de residuos
-        </span>
-        </li>
-        <li class="flex items-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#014b41" fill="none">
-            <path d="M5 14.5C5 14.5 6.5 14.5 8.5 18C8.5 18 14.0588 8.83333 19 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <li class="flex flex-col items-start gap-2">
+        <div class="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            color="#014b41"
+            fill="none"
+          >
+            <path
+              d="M5 14.5C5 14.5 6.5 14.5 8.5 18C8.5 18 14.0588 8.83333 19 7"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
           </svg>
-          <span>Disminución de la Huella de Carbono</span>
-        </li>
-      <li class="flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#014b41" fill="none">
-          <path d="M5 14.5C5 14.5 6.5 14.5 8.5 18C8.5 18 14.0588 8.83333 19 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-        <span>Promoción de la Economía Circular</span>
+          <span> Reducción de residuos </span>
+        </div>
+        <p class="text-sm pl-8 text-text2/85">
+          Nuestros paños reutilizables reducen la cantidad de papel toalla y
+          otros productos desechables.
+        </p>
+      </li>
+      <li class="flex flex-col items-start gap-2">
+        <div class="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            color="#014b41"
+            fill="none"
+          >
+            <path
+              d="M5 14.5C5 14.5 6.5 14.5 8.5 18C8.5 18 14.0588 8.83333 19 7"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+          <span> Economía de agua </span>
+        </div>
+        <p class="text-sm pl-8 text-text2/85">
+          Nuestro paños pueden ser lavados y reutilizados, lo que reduce el
+          consumo de agua.
+        </p>
+      </li>
+      <li class="flex flex-col items-start gap-2">
+        <div class="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            color="#014b41"
+            fill="none"
+          >
+            <path
+              d="M5 14.5C5 14.5 6.5 14.5 8.5 18C8.5 18 14.0588 8.83333 19 7"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+          <span> Materiales reciclados </span>
+        </div>
+        <p class="text-sm pl-8 text-text2/85">
+          Nuestro paños están hechos con amteriales reciclados y
+          bioidegradables.
+        </p>
       </li>
     </ul>
   </div>
@@ -99,7 +154,7 @@ const images = [
   .carouselimg {
     animation: breathe 30s ease-in-out infinite;
   }
-  
+
   .carouselimg2 {
     animation: breathe2 30s ease-in-out infinite;
   }
@@ -115,7 +170,7 @@ const images = [
       transform: translateY(0);
     }
   }
-  
+
   @keyframes breathe2 {
     0% {
       transform: translateY(-100px);
