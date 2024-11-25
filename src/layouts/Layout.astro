@@ -17,13 +17,14 @@ interface Props {
 }
 
 const whatsappNumber = "56977225664";
+const message = "Hola!, estoy interesado en cotizar un pedido";
 
-const createWhatsAppLink = (number: string) => {
-	return https://wa.me/${number};
+const createWhatsAppLink = (number: string, message: string) => {
+  const encodedMessage = encodeURIComponent(message);
+  return `https://wa.me/${number}?text=${encodedMessage}`;
 };
 
-const whatsappLink = createWhatsAppLink(whatsappNumber);
-
+const whatsappLink = createWhatsAppLink(whatsappNumber, message);
 const { title, description } = Astro.props;
 ---
 
